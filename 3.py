@@ -11,6 +11,7 @@ class Student:
         self.gladness1 = random.randint(1, 2)
         self.workexp = 0
 
+
     def to_work(self):
         print("Half-time work")
         if self.gladness1 == 1:
