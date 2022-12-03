@@ -1,7 +1,7 @@
 import random
 
 
-class student:
+class Student:
     def __init__(self, name):
         self.name = name
         self.balance = 200
@@ -50,11 +50,15 @@ class student:
             print("He finish the collage")
             self.alive = True
             self.gladness = +50
+        elif self.balance <= 10:
+            self.alive = False
+            self.to_work()
+
 
     def end_of_day(self):
         print(f'Gladness = {self.gladness}')
         print(f'Progress = {round(self.progress, 2)}')
-        print(f'Balance = {self.balance}')
+        print(f'Balance = {self.balance}$')
         print(f'Workexperience = {self.workexp}')
 
     def live(self, day):
@@ -70,8 +74,7 @@ class student:
         self.end_of_day()
         self.is_alive()
 
-
-sasha = student(name="Sasha")
+sasha = Student(name="Sasha")
 for day in range(365):
     if sasha.alive == False:
         break
